@@ -1,0 +1,123 @@
+@media screen and (max-width: 1100px) {
+    .nav-header {
+        padding: 0 1rem;
+    }
+
+    .home {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .home > div {
+        margin: 0;
+    }
+
+    .home-info-container { 
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .nav-header {
+        background-color: #fff;
+    }
+
+    .nav-links-container {
+        display: none;
+    }
+
+    .nav-burger-container {
+        display: block;
+    }
+
+    .overlay {
+        display: block;
+    }
+
+    .skill-list-container {
+        grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+        width: 32rem;
+    }
+
+    .contact-info-container {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .nav-header {
+        height: 8vh;
+    }
+
+    .nav-menu {
+        top: 8vh;
+    }
+
+    .overlay {
+        top: 8vh;
+    }
+
+    .home-info-container h1 {
+        white-space: normal;
+        text-align: center;
+    }
+
+    .home-photo {
+        height: 13rem;
+    }
+
+    .skill-list-container {
+        grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+        width: 60vw;
+    }
+
+    .exp-info-container {
+        gap: 1rem;
+    }
+
+    .exp-info {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .exp-info:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .exp-info:nth-child(even)>.exp-title {
+        text-align: center;
+    }
+
+    .exp-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #eee;
+        padding: 1rem 0;
+        gap: 1rem;
+        border-radius: 1rem 1rem 0 0;
+        filter: drop-shadow(0 0 3px #bbb);
+    }
+
+    .exp-title-icon {
+        background-color: #eee;
+        border: none;
+        display: block;
+    }
+
+    .exp-div {
+        display: none;
+    }
+
+    .exp-desc {
+        padding: 1.3rem;
+        border-radius: 0 0 1rem 1rem;
+        background-color: #fff;
+    }
+
+    .exp-desc-arrow {
+        display: none;
+    }
+}
