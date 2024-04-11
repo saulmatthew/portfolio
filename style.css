@@ -441,7 +441,7 @@ h3 {
 .exp-icon {
     height: 1.5rem;
     background-color: #fff;
-    content: url("/assets/icons/exp.svg");
+    content: url("./assets/icons/exp.svg");
     border: 0.3rem solid #fff;
     border-radius: 50%;
 }
@@ -451,7 +451,7 @@ h3 {
 }
 
 .exp-icon.educ {
-    content: url("/assets/icons/educ.svg");
+    content: url("./assets/icons/educ.svg");
 }
 
 .exp-desc-container {
