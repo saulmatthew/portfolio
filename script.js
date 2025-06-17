@@ -3,6 +3,10 @@ const skills = {
         text: "SKILLS",
         id: "skill",
         list: {
+            oracle: {
+                text: "ORACLE CLOUD",
+                icon: "./assets/icons/skill-icons/oracle.svg",
+            },
             html: {
                 text: "HTML",
                 icon: "./assets/icons/skill-icons/html.svg",
@@ -53,13 +57,32 @@ const skills = {
 
 const certs = {
     cert: {
-        text: "CERTIFICATION",
+        text: "CERTIFICATIONS",
         id: "cert",
         list: {
-            aws: {
-                text: "AWS Cloud Practitioner",
-                icon: "./assets/icons/skill-icons/aws.svg",
-                link: "https://www.credly.com/badges/93ef0af8-3543-4b1e-9482-3f51e34dae43",
+            oracle_apex_dev_pro: {
+                title: "Oracle APEX Cloud",
+                text: "Developer Professional",
+                icon: "./assets/icons/skill-icons/oracle.svg",
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D54265F038C5EE761A0CD7AAA34F1E1AB325CEA39D2C5F44F09C918153D839A7",
+            },
+            oracle_oci_appinteg_pro: {
+                title: "Oracle Cloud Infrastructure",
+                text: "Application Integration",
+                icon: "./assets/icons/skill-icons/oracle.svg",
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=36D029E1952D4B98FAFA54A53BFDDE0A87FB382063C384D43A27F0F7258456E4",
+            },
+            oracle_oci_genai_pro: {
+                title: "Oracle Cloud Infrastructure",
+                text: "Generative AI",
+                icon: "./assets/icons/skill-icons/oracle.svg",
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=2F4FC9A564E2E972CE261BD080FBB92BDD5C6C38539C01EB630758407025C96A",
+            },
+            oracle_hcm_busproc_pro1: {
+                title: "Oracle HCM",
+                text: "Business Process",
+                icon: "./assets/icons/skill-icons/oracle.svg",
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=2F4FC9A564E2E972CE261BD080FBB92BDD5C6C38539C01EB630758407025C96A",
             }
         }
     }
@@ -105,25 +128,36 @@ function createSkillList(skillsObj) {
     
         let skillIcon = document.createElement('img');
         skillIcon.setAttribute('class', 'skill-icon');
-        skillIcon.setAttribute('src', skill.icon);   
-
-        if (skillsObj.id === 'cert') {
-            let certIcon = document.createElement('a');
-            certIcon.setAttribute('class', 'skill-icon');
-            certIcon.setAttribute('href', skill.link);
-            certIcon.setAttribute('target', '_blank');
-
-            certIcon.appendChild(skillIcon);
-            skillCont.appendChild(certIcon);
-        } else {
-            skillCont.appendChild(skillIcon);
-        }
+        skillIcon.setAttribute('src', skill.icon);
 
         let skillTooltip = document.createElement('span');
         skillTooltip.setAttribute('class', 'skill-tooltip');
         skillTooltip.textContent = skill.text;
-    
-        skillCont.appendChild(skillTooltip);
+
+        if (skillsObj.id === 'cert') {
+            let certIcon = document.createElement('a');
+            certIcon.setAttribute('class', 'skill-icon cert');
+            certIcon.setAttribute('href', skill.link);
+            certIcon.setAttribute('target', '_blank');
+
+            let certTextCont = document.createElement('div');
+            certTextCont.setAttribute('class', 'cert-cont');
+            let certTitle = document.createElement('h3');
+            certTitle.textContent = skill.title;
+            let certText = document.createElement('p');
+            certText.setAttribute('class', 'cert-text');
+            certText.textContent = skill.text;
+            certTextCont.appendChild(certTitle);
+            certTextCont.appendChild(certText);
+
+            certIcon.appendChild(skillIcon);
+            certIcon.appendChild(certTextCont);
+            skillCont.appendChild(certIcon);
+        } else {
+            skillCont.appendChild(skillIcon);
+            skillCont.appendChild(skillTooltip);
+        }
+
         skillList.appendChild(skillCont);
     }
 }
