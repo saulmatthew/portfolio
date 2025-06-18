@@ -61,28 +61,28 @@ const certs = {
         id: "cert",
         list: {
             oracle_apex_dev_pro: {
-                title: "Oracle APEX Cloud",
-                text: "Developer Professional",
+                title: "Oracle APEX",
+                text: "Cloud Developer Professional",
                 icon: "./assets/icons/skill-icons/oracle.svg",
                 link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=D54265F038C5EE761A0CD7AAA34F1E1AB325CEA39D2C5F44F09C918153D839A7",
             },
             oracle_oci_appinteg_pro: {
                 title: "Oracle Cloud Infrastructure",
-                text: "Application Integration",
+                text: "Application Integration Professional",
                 icon: "./assets/icons/skill-icons/oracle.svg",
                 link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=36D029E1952D4B98FAFA54A53BFDDE0A87FB382063C384D43A27F0F7258456E4",
             },
             oracle_oci_genai_pro: {
                 title: "Oracle Cloud Infrastructure",
-                text: "Generative AI",
+                text: "Generative AI Professional",
                 icon: "./assets/icons/skill-icons/oracle.svg",
                 link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=2F4FC9A564E2E972CE261BD080FBB92BDD5C6C38539C01EB630758407025C96A",
             },
-            oracle_hcm_busproc_pro1: {
+            oracle_hcm_busproc_asoc: {
                 title: "Oracle HCM",
-                text: "Business Process",
+                text: "Business Process Associate",
                 icon: "./assets/icons/skill-icons/oracle.svg",
-                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=2F4FC9A564E2E972CE261BD080FBB92BDD5C6C38539C01EB630758407025C96A",
+                link: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=963D5073325BD694E1A6DF10AF02F294AB8D5D0D80877903DB6FCF545A1BDE72",
             }
         }
     }

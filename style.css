@@ -348,15 +348,15 @@ h3 {
 
 .skill-list-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16.66%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(14.25%, 1fr));
     justify-items: center;
     align-items: center;
     row-gap: 1.5rem;
-    width: 55rem;
+    width: 80vw;
 }
 
 #cert {
-    grid-template-columns: repeat(auto-fit, minmax(33.33%, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
     row-gap: 5rem;
 }
 
